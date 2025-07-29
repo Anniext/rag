@@ -1,0 +1,67 @@
+# RAG 系统配置文件
+
+# 服务器配置
+server:
+  host: "0.0.0.0"
+  port: 8080
+  read_timeout: "30s"
+  write_timeout: "30s"
+
+# 数据库配置
+database:
+  driver: "mysql"
+  host: "${DB_HOST:localhost}"
+  port: 3306
+  username: "${DB_USERNAME:root}"
+  password: "${DB_PASSWORD:123456}"
+  database: "${DB_DATABASE:pumppill_dev}"
+  max_open_conns: 100
+  max_idle_conns: 10
+  conn_max_lifetime: "1h"
+
+# LLM 配置
+llm:
+  provider: "openai"
+  model: "gpt-4"
+  temperature: 0.1
+  max_tokens: 2048
+  options:
+    api_key: "${OPENAI_API_KEY:}"
+    base_url: "${OPENAI_BASE_URL:https://api.openai.com/v1}"
+    timeout: "30s"
+
+# 缓存配置
+cache:
+  type: "redis"
+  host: "${REDIS_HOST:localhost}"
+  port: 6379
+  password: "${REDIS_PASSWORD:}"
+  database: 0
+  schema_ttl: "1h"
+  query_result_ttl: "10m"
+  max_cache_size: "100MB"
+
+# 日志配置
+log:
+  level: "info"
+  format: "json"
+  output: "stdout"
+  file_path: "logs/rag.log"
+  max_size: 100
+  max_backups: 3
+  max_age: 7
+
+# 安全配置
+security:
+  jwt_secret: "${JWT_SECRET:your-secret-key-here}"
+  token_expiry: "24h"
+  enable_rbac: true
+  allowed_origins:
+    - "*"
+
+# MCP 配置
+mcp:
+  host: "0.0.0.0"
+  port: 8081
+  timeout: "30s"
+  max_connections: 1000

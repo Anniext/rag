@@ -1,0 +1,76 @@
+# RAG 系统测试环境配置文件
+
+# 服务器配置
+server:
+  host: "0.0.0.0"
+  port: 8080
+  read_timeout: "30s"
+  write_timeout: "30s"
+
+# 数据库配置
+database:
+  driver: "mysql"
+  host: "${DB_HOST:staging-db.example.com}"
+  port: 3306
+  username: "${DB_USERNAME:rag_user}"
+  password: "${DB_PASSWORD}"
+  database: "${DB_DATABASE:pumppill_staging}"
+  max_open_conns: 80
+  max_idle_conns: 8
+  conn_max_lifetime: "45m"
+
+# LLM 配置
+llm:
+  provider: "openai"
+  model: "gpt-4"
+  temperature: 0.1
+  max_tokens: 2048
+  options:
+    api_key: "${OPENAI_API_KEY}"
+    base_url: "${OPENAI_BASE_URL:https://api.openai.com/v1}"
+    timeout: "45s"
+
+# 缓存配置
+cache:
+  type: "redis"
+  host: "${REDIS_HOST:staging-redis.example.com}"
+  port: 6379
+  password: "${REDIS_PASSWORD}"
+  database: 1
+  schema_ttl: "45m"
+  query_result_ttl: "8m"
+  max_cache_size: "80MB"
+
+# 日志配置
+log:
+  level: "info"
+  format: "json"
+  output: "file"
+  file_path: "/var/log/rag/rag-staging.log"
+  max_size: 80
+  max_backups: 5
+  max_age: 10
+
+# 安全配置
+security:
+  jwt_secret: "${JWT_SECRET}"
+  token_expiry: "12h"
+  enable_rbac: true
+  allowed_origins:
+    - "https://staging.pumppill.com"
+    - "https://staging-admin.pumppill.com"
+
+# MCP 配置
+mcp:
+  host: "0.0.0.0"
+  port: 8081
+  timeout: "45s"
+  max_connections: 500
+
+# 测试环境特定配置
+staging:
+  enable_debug: false
+  enable_profiling: true
+  mock_external_services: false
+  performance_monitoring: true
+  load_test_mode: false

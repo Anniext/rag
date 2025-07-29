@@ -1,0 +1,74 @@
+# RAG 系统开发环境配置文件
+
+# 服务器配置
+server:
+  host: "0.0.0.0"
+  port: 8080
+  read_timeout: "30s"
+  write_timeout: "30s"
+
+# 数据库配置
+database:
+  driver: "mysql"
+  host: "${DB_HOST:localhost}"
+  port: 3306
+  username: "${DB_USERNAME:root}"
+  password: "${DB_PASSWORD:123456}"
+  database: "${DB_DATABASE:pumppill_dev}"
+  max_open_conns: 50
+  max_idle_conns: 5
+  conn_max_lifetime: "30m"
+
+# LLM 配置
+llm:
+  provider: "openai"
+  model: "gpt-3.5-turbo" # 开发环境使用更便宜的模型
+  temperature: 0.2
+  max_tokens: 1024
+  options:
+    api_key: "${OPENAI_API_KEY:}"
+    base_url: "${OPENAI_BASE_URL:https://api.openai.com/v1}"
+    timeout: "60s"
+
+# 缓存配置
+cache:
+  type: "memory" # 开发环境使用内存缓存
+  host: "${REDIS_HOST:localhost}"
+  port: 6379
+  password: "${REDIS_PASSWORD:}"
+  database: 0
+  schema_ttl: "30m"
+  query_result_ttl: "5m"
+  max_cache_size: "50MB"
+
+# 日志配置
+log:
+  level: "debug" # 开发环境使用调试级别
+  format: "text" # 开发环境使用文本格式便于阅读
+  output: "stdout"
+  file_path: "logs/rag-dev.log"
+  max_size: 50
+  max_backups: 2
+  max_age: 3
+
+# 安全配置
+security:
+  jwt_secret: "${JWT_SECRET:dev-secret-key-change-in-production}"
+  token_expiry: "24h"
+  enable_rbac: false # 开发环境简化权限控制
+  allowed_origins:
+    - "*"
+
+# MCP 配置
+mcp:
+  host: "0.0.0.0"
+  port: 8081
+  timeout: "60s"
+  max_connections: 100
+
+# 开发环境特定配置
+development:
+  enable_debug: true
+  enable_profiling: true
+  mock_external_services: true
+  auto_reload: true
