@@ -9,14 +9,13 @@
 package schema
 
 import (
-	"fmt"     // 格式化输出
+	"fmt" // 格式化输出
+	"github.com/Anniext/rag/core"
 	"math"    // 数学运算
 	"sort"    // 排序
 	"strconv" // 字符串与数字转换
 	"strings" // 字符串处理
 	"unicode" // Unicode 字符处理
-
-	"pumppill/rag/core" // 业务核心结构体
 )
 
 // SearchEngine Schema 搜索引擎，负责数据库结构的智能搜索。

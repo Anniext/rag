@@ -3,11 +3,10 @@ package query
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"regexp"
 	"strings"
 	"time"
-
-	"pumppill/rag/core"
 )
 
 // QueryParser 查询解析器结构体

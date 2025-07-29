@@ -4,10 +4,9 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"strings"
 	"time"
-
-	"pumppill/rag/core"
 )
 
 // QueryExecutor 查询执行器

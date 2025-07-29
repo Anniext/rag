@@ -3,14 +3,13 @@ package langchain
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"strings"
 	"sync"
 	"time"
 
 	"github.com/tmc/langchaingo/llms"
 	"go.uber.org/zap"
-
-	"pumppill/rag/core"
 )
 
 // baseTool 基础工具实现，包含工具的通用属性和方法

@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"go.uber.org/zap"
 	"os"
 	"strconv"

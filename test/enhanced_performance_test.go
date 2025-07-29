@@ -4,6 +4,10 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"github.com/Anniext/rag/cache"
+	"github.com/Anniext/rag/core"
+	"github.com/Anniext/rag/schema"
+	"github.com/Anniext/rag/session"
 	"math/rand"
 	"os"
 	"runtime"
@@ -12,11 +16,6 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
-
-	"pumppill/rag/cache"
-	"pumppill/rag/core"
-	"pumppill/rag/schema"
-	"pumppill/rag/session"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/stretchr/testify/require"

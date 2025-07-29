@@ -10,10 +10,9 @@ package schema
 
 import (
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"sort"
 	"strings"
-
-	"pumppill/rag/core"
 )
 
 // RelationshipAnalyzer 表关系分析器，负责分析 schema 中所有表的关系。

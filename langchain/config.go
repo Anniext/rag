@@ -10,14 +10,13 @@ package langchain
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"sync"
 	"time"
 
 	"github.com/tmc/langchaingo/llms"
 	"github.com/tmc/langchaingo/llms/openai"
 	"go.uber.org/zap"
-
-	"pumppill/rag/core"
 )
 
 // LLMClientConfig LLM 客户端配置，定义与大语言模型交互的参数

@@ -11,12 +11,11 @@ package langchain
 import (
 	"context" // 上下文管理
 	"fmt"     // 格式化输出
-	"sync"    // 并发锁
-	"time"    // 时间处理
+	"github.com/Anniext/rag/core"
+	"sync" // 并发锁
+	"time" // 时间处理
 
 	"go.uber.org/zap" // 日志库
-
-	"pumppill/rag/core" // 业务核心结构体
 )
 
 // langChainManagerImpl LangChain 管理器实现

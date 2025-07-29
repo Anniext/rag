@@ -1,8 +1,8 @@
 package langchain
 
 import (
+	"github.com/Anniext/rag/core"
 	"go.uber.org/zap"
-	"pumppill/rag/core"
 	"sync"
 	"time"
 )

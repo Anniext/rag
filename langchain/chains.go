@@ -11,12 +11,11 @@ package langchain
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"strings"
 	"sync"
 
 	"go.uber.org/zap"
-
-	"pumppill/rag/core"
 )
 
 // baseChain 基础 Chain 实现，作为所有链的通用父类，封装了链的通用属性和方法

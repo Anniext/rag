@@ -10,11 +10,10 @@ package security
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"regexp"
 	"strings"
 	"time"
-
-	"pumppill/rag/core"
 )
 
 // SQLGuard SQL 安全防护器

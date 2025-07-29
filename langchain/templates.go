@@ -12,15 +12,16 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"strings"
 	"sync"
 	"text/template"
 	"time"
 
 	"go.uber.org/zap"
-
-	"pumppill/rag/core"
 )
+
+type TemplateType string
 
 // TemplateType 模板类型枚举，表示不同的提示模板用途
 // 支持 SQL 生成、查询解释、错误分析、建议生成、查询优化等场景

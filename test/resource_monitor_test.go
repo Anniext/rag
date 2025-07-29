@@ -3,6 +3,7 @@ package test
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"os"
 	"runtime"
 	"sync"

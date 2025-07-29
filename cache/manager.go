@@ -3,6 +3,7 @@ package cache
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"sync"
 	"time"
 )

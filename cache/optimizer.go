@@ -3,11 +3,10 @@ package cache
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"regexp"
 	"strings"
 	"time"
-
-	"pumppill/rag/core"
 )
 
 // QueryOptimizer SQL 查询性能分析和优化器

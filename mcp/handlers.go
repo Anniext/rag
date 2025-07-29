@@ -3,10 +3,9 @@ package mcp
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"sync"
 	"time"
-
-	"pumppill/rag/core"
 )
 
 // HandlerRegistry 处理器注册表

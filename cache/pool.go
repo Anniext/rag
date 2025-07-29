@@ -3,11 +3,10 @@ package cache
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"sync"
 	"sync/atomic"
 	"time"
-
-	"pumppill/rag/core"
 )
 
 // ConnectionPool 连接池接口

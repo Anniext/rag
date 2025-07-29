@@ -3,10 +3,9 @@ package query
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"regexp"
 	"strings"
-
-	"pumppill/rag/core"
 )
 
 // SQLGenerator SQL 生成引擎

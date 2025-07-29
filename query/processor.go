@@ -3,10 +3,9 @@ package query
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"strings"
 	"time"
-
-	"pumppill/rag/core"
 )
 
 // RAGQueryProcessor RAG 查询处理器的完整实现

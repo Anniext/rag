@@ -10,14 +10,13 @@ package langchain
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"sync"
 	"sync/atomic"
 	"time"
 
 	"github.com/tmc/langchaingo/llms"
 	"go.uber.org/zap"
-
-	"pumppill/rag/core"
 )
 
 // LLMClient LLM 客户端接口，定义了大语言模型客户端的基本操作方法

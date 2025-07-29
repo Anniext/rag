@@ -10,10 +10,9 @@ package security
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"strings"
 	"time"
-
-	"pumppill/rag/core"
 )
 
 // Manager 安全管理器，实现 SecurityManager 接口

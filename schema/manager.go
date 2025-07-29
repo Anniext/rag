@@ -11,11 +11,10 @@ package schema
 import (
 	"context" // 上下文管理
 	"fmt"     // 格式化输出
+	"github.com/Anniext/rag/core"
 	"strings" // 字符串处理
 	"sync"    // 并发锁
 	"time"    // 时间处理
-
-	"pumppill/rag/core" // 业务核心结构体
 )
 
 // SchemaLoader Schema 加载器接口，定义数据库结构相关操作。

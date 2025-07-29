@@ -85,7 +85,7 @@ run_concurrent_test() {
     STRESS_TEST=true \
     STRESS_TEST_DURATION="${DURATION}" \
     STRESS_MAX_CONCURRENCY="${CONCURRENCY}" \
-    go test -v -run TestStressConcurrentQueries -timeout $(($(echo ${DURATION} | sed 's/[^0-9]*//g') * 3))s
+    go test -v -run  TestStressConcurrentQueries ../test -timeout $(($(echo ${DURATION} | sed 's/[^0-9]*//g') * 3))s
     
     if [ $? -eq 0 ]; then
         print_success "并发查询压力测试完成"
@@ -103,7 +103,7 @@ run_memory_test() {
     STRESS_TEST=true \
     STRESS_MEMORY_SESSIONS="${MEMORY_SESSIONS}" \
     STRESS_QUERIES_PER_SESSION="${QUERIES_PER_SESSION}" \
-    go test -v -run TestStressMemoryUsage -timeout 5m
+    go test -v -run TestStressMemoryUsage ../test -timeout 5m
     
     if [ $? -eq 0 ]; then
         print_success "内存使用压力测试完成"
@@ -121,7 +121,7 @@ run_stability_test() {
     STRESS_TEST=true \
     STRESS_TEST_DURATION="${DURATION}" \
     STRESS_MAX_CONCURRENCY="${CONCURRENCY}" \
-    go test -v -run TestStressLongRunningStability -timeout $(($(echo ${DURATION} | sed 's/[^0-9]*//g') * 2))s
+    go test -v -run TestStressLongRunningStability ../test -timeout $(($(echo ${DURATION} | sed 's/[^0-9]*//g') * 2))s
     
     if [ $? -eq 0 ]; then
         print_success "长时间稳定性测试完成"

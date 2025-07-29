@@ -12,11 +12,10 @@ import (
 	"context"      // 上下文管理
 	"database/sql" // 数据库操作
 	"errors"
-	"fmt"     // 格式化输出
+	"fmt" // 格式化输出
+	"github.com/Anniext/rag/core"
 	"strings" // 字符串处理
 	"time"    // 时间处理
-
-	"pumppill/rag/core" // 业务核心结构体
 
 	_ "github.com/go-sql-driver/mysql" // MySQL 驱动
 )

@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"github.com/Anniext/rag/core"
 	"log"
 	"os"
 	"os/signal"

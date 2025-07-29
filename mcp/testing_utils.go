@@ -2,8 +2,7 @@ package mcp
 
 import (
 	"context"
-
-	"pumppill/rag/core"
+	"github.com/Anniext/rag/core"
 
 	"github.com/stretchr/testify/mock"
 )

@@ -15,6 +15,7 @@ package config
 import (
 	"context" // 上下文管理
 	"encoding/json"
+	"github.com/Anniext/rag/core"
 
 	// JSON 处理
 	"errors"        // 错误处理
@@ -24,8 +25,6 @@ import (
 	"strings"       // 字符串处理
 	"sync"          // 同步原语
 	"time"          // 时间处理
-
-	"pumppill/rag/core" // 配置结构体定义
 
 	"github.com/fsnotify/fsnotify" // 文件变更通知
 	"github.com/spf13/viper"       // 配置库
